@@ -1,0 +1,26 @@
+html, body {
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+#particles-js {
+	z-index: -1;
+}
+
+@media (max-height: 665px) {
+	html, body {
+		overflow: auto;
+	}
+
+	#presentation {
+		height: 100%;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	#skills {
+		height: 100%;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+}
