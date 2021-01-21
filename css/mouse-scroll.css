@@ -1,0 +1,171 @@
+.mouse {
+	background: rgb(75, 85, 99) linear-gradient(transparent 0%, transparent 50%, rgb(249, 250, 251) 50%, rgb(249, 250, 251) 100%);
+	position: relative;
+	width: 26px;
+	height: 44px;
+	border-radius: 100px;
+	background-size: 100% 200%;
+	animation: nudgeMouse 5s linear infinite, nudgeMouse 5s ease-out infinite;
+}
+
+.mouse:before, .mouse:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.mouse:before {
+	width: 23px;
+	height: 41px;
+	background-color: rgb(249, 250, 251);
+	border-radius: 100px;
+}
+
+.mouse:after {
+	background-color: rgb(75, 85, 99);
+	width: 5px;
+	height: 5px;
+	border-radius: 100%;
+	animation: trackBallSlide 5s linear infinite;
+}
+
+@keyframes trackBallSlide {
+	0% {
+		opacity: 1;
+		transform: scale(1) translateY(-10px);
+	}
+
+	6% {
+		opacity: 1;
+		transform: scale(0.9) translateY(2.5px);
+	}
+
+	14% {
+		opacity: 0;
+		transform: scale(0.4) translateY(20px);
+	}
+
+	15%, 19% {
+		opacity: 0;
+		transform: scale(0.4) translateY(-10px);
+	}
+
+	28%, 29.99% {
+		opacity: 1;
+		transform: scale(1) translateY(-10px);
+	}
+
+	30% {
+		opacity: 1;
+		transform: scale(1) translateY(-10px);
+	}
+
+	36% {
+		opacity: 1;
+		transform: scale(0.9) translateY(2.5px);
+	}
+
+	44% {
+		opacity: 0;
+		transform: scale(0.4) translateY(20px);
+	}
+
+	45%, 49% {
+		opacity: 0;
+		transform: scale(0.4) translateY(-10px);
+	}
+
+	58%, 59.99% {
+		opacity: 1;
+		transform: scale(1) translateY(-10px);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale(1) translateY(-10px);
+	}
+
+	66% {
+		opacity: 1;
+		transform: scale(0.9) translateY(2.5px);
+	}
+
+	74% {
+		opacity: 0;
+		transform: scale(0.4) translateY(20px);
+	}
+
+	75%, 79% {
+		opacity: 0;
+		transform: scale(0.4) translateY(-10px);
+	}
+
+	88%, 100% {
+		opacity: 1;
+		transform: scale(1) translateY(-10px);
+	}
+}
+
+@keyframes nudgeMouse {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateY(4px);
+	}
+
+	30% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(4px);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+
+	80% {
+		transform: translateY(4px);
+	}
+
+	90% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes nudgeText {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateY(1px);
+	}
+
+	30% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(1px);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+
+	80% {
+		transform: translateY(1px);
+	}
+
+	90% {
+		transform: translateY(0);
+	}
+}

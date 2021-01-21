@@ -6,8 +6,6 @@ $(document).ready(function () {
 	var pageHeightForAnimation = 665;
 	var mobilePage = $(window).height() <= pageHeightForAnimation;
 
-	console.log(mobilePage);
-
 	function scrollTo(id) {
 		$('html, body').animate({
 			scrollTop: $("#" + id).offset().top
@@ -20,9 +18,18 @@ $(document).ready(function () {
 		}, scrollTime);
 	}
 
-	scrollTo(sections[sectionIndex]);
+	function goToLastSection() {
+		if (mobilePage && $(window).height() > pageHeightForAnimation) {
+			mobilePage = false;
+			isScrolling = true;
+			scrollTo(sections[sectionIndex]);
+			stopScrolling();
+		} else if ($(window).height() <= pageHeightForAnimation) {
+			mobilePage = true;
+		}
+	}
 
-	$(window).bind('mousewheel DOMMouseScroll', function (event) {
+	function goToNextSection(event) {
 		if (!isScrolling && $(window).height() > pageHeightForAnimation) {
 			isScrolling = true;
 			if ((event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) && sectionIndex > 0) {
@@ -37,16 +44,35 @@ $(document).ready(function () {
 				isScrolling = false;
 			}
 		}
+	}
+
+	/*function castResponsive() {
+		var responsive = false;
+		console.log($("#presentation").prop('scrollHeight'));
+		console.log($("#presentation").height());
+		sections.forEach(section => {
+			if ($("#" + section).prop('scrollHeight') > $("#" + section).height()) {
+				responsive = true;
+			}
+		});
+		console.log(responsive);
+		//$('link[href="css/responsive.css"]').prop('disabled', responsive);
+		if (responsive) {
+			$('head').append('<link href="css/responsive.css" rel="stylesheet">');
+		} else {
+			$('link[href="css/responsive.css"]').remove();
+		}
+	}*/
+
+	scrollTo(sections[sectionIndex]);
+	//castResponsive();
+
+	$(window).bind('mousewheel DOMMouseScroll', function (event) {
+		goToNextSection(event);
 	});
 
 	$(window).resize(function () {
-		if (mobilePage && $(window).height() > pageHeightForAnimation) {
-			mobilePage = false;
-			isScrolling = true;
-			scrollTo(sections[sectionIndex]);
-			stopScrolling();
-		} else if ($(window).height() <= pageHeightForAnimation) {
-			mobilePage = true;
-		}
+		//castResponsive();
+		goToLastSection();
 	});
 });

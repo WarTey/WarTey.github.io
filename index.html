@@ -7,39 +7,231 @@
 			content="Portfolio de Guillaume Blanc de Lanaute. Étudiant à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo).">
 		<meta name="author" content="Guillaume Blanc de Lanaute">
 		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+			crossorigin="anonymous">
 		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/mouse-scroll.css" rel="stylesheet">
 		<title>WarTey</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	</head>
 	<body>
 		<div id="particles-js" class="h-screen w-full fixed bg-gray-50"></div>
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div id="presentation" class="h-screen flex flex-col items-center justify-center">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-600">
+			<div id="presentation" class="h-full flex flex-col items-center justify-center pt-32 pb-36">
 				<img class="w-60 text-center" src="img/profil.webp" alt="Image de profil"></img>
-				<blockquote class="text-2xl pt-12 text-gray-600 quote">
-					<p class="text-center">
+				<blockquote class="pt-6 quote">
+					<p class="text-center text-lg">
 						Bonjour!
 					</p>
-					<p class="pt-12">
-						Je m'appelle <span class="font-bold">Guillaume Blanc de Lanaute</span> et je suis actuellement un dernier année
-						à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo). Passionné par l'univers de la
-						programmation et des jeux vidéo, je suis à la recherche d'un stage de fin d'étude
+					<p class="pt-6 text-lg text-justify">
+						Je m'appelle <span class="font-bold">Guillaume Blanc de Lanaute</span> et je suis actuellement en <span class="font-bold">double diplôme</span>
+						à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo) ainsi qu'à l'Institut supérieur de
+						l'électronique et du numérique (cybersécurité). <span class="font-bold">Passionné par l'univers de la
+						programmation et des jeux vidéo</span>, je suis à la recherche d'un <span class="font-bold">stage</span> de fin d'étude dans le développement de jeux vidéo
+						(juillet 2021)
 						pour mettre en application mes connaissances mais aussi pour en acquérir.
 					</p>
-					<p class="pt-12 text-xl">
-						Intéressé par mon profil ? Contactez-moi avec <a class="underline"
-							href="mailto:guillaume.blanc-de-lanaute@outlook.com">guillaume.blanc-de-lanaute@outlook.com</a>
-					</p>
+					<div class="pt-6 text-center">
+						<p class="text-base">N'hésitez pas à me contacter pour toute information complémentaire :</p>
+						<div class="pt-4 text-base">
+							<a class="link" href="https://www.linkedin.com/in/guillaume-blanc-de-lanaute/">
+								<i class="fab fa-linkedin-in fa-lg px-1"></i>
+								LinkedIn
+							</a>
+							<a class="link" href="mailto:guillaume.blanc-de-lanaute@outlook.com">
+								<i class="fas fa-at fa-lg px-1"></i>
+								Mail
+							</a>
+							<a class="link" href="https://github.com/WarTey">
+								<i class="fab fa-github fa-lg px-1"></i>
+								GitHub
+							</a>
+							<a class="link" href="https://gitlab.com/WarTey">
+								<i class="fab fa-gitlab fa-lg px-1"></i>
+								GitLab
+							</a>
+							<a class="link" href="https://gitlab.com/WarTey">
+								<i class="far fa-file-pdf fa-lg px-1"></i>
+								CV
+							</a>
+						</div>
+					</div>
 				</blockquote>
 			</div>
-			<div id="skills" class="h-screen flex flex-col items-center justify-center">
-				Next section
+			<div class="flex justify-center">
+				<div class="mouse"></div>
+			</div>
+			<div id="skills" class="h-full flex flex-col items-center justify-center py-36">
+				<p class="text-center text-xl font-bold">
+					Mes compétences
+				</p>
+				<p class="text-center text-base italic pt-4">
+					(Technologies, moteurs de jeux et langages utilisés quotidiennement ou occasionnellement)
+				</p>
+				<div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-3 gap-8 pt-8">
+					<div class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1">
+						<div class="text-center text-lg font-semibold">
+							Langages
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/languages/c++.webp" alt="Logo C++"></img>
+							<img class="h-12 px-1" src="img/languages/c-sharp.webp" alt="Logo C#"></img>
+							<img class="h-12 px-1" src="img/languages/c.webp" alt="Logo C"></img>
+							<img class="h-12 px-1" src="img/languages/python.webp" alt="Logo Python"></img>
+							<img class="h-12 px-1" src="img/languages/java.webp" alt="Logo Java"></img>
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/languages/js.webp" alt="Logo JS"></img>
+							<img class="h-12 px-1" src="img/languages/rust.webp" alt="Logo Rust"></img>
+							<img class="h-12 px-1" src="img/languages/ruby.webp" alt="Logo Ruby"></img>
+							<img class="h-12 px-1" src="img/languages/php.webp" alt="Logo PHP"></img>
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/languages/html5.webp" alt="Logo HTML"></img>
+							<img class="h-12 px-1" src="img/languages/css3.webp" alt="Logo CSS"></img>
+							<img class="h-12 px-1" src="img/languages/sql.webp" alt="Logo SQL"></img>
+						</div>
+					</div>
+					<div class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1">
+						<div class="text-center text-lg font-semibold">
+							Moteurs de jeux
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/engines/unity.webp" alt="Logo Unity"></img>
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/engines/unreal.webp" alt="Logo Unreal"></img>
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/engines/pygame.webp" alt="Logo Pygame"></img>
+						</div>
+					</div>
+					<div class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-start-1 col-span-1 sm:col-start-2 sm:col-span-2 lg:col-start-3 lg:col-span-1">
+						<div class="text-center text-lg font-semibold">
+							Outils
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/tools/visual-studio.webp" alt="Logo Visual Studio"></img>
+							<img class="h-12 px-1" src="img/tools/vscode.webp" alt="Logo VSCode"></img>
+							<img class="h-12 px-1" src="img/tools/git.webp" alt="Logo Git"></img>
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/tools/trello.webp" alt="Logo Trello"></img>
+							<img class="h-12 px-1" src="img/tools/jetbrains.webp" alt="Logo JetBrains"></img>
+							<img class="h-12 px-1" src="img/tools/xcode.webp" alt="Logo Xcode"></img>
+						</div>
+						<div class="pt-4 text-center flex justify-center">
+							<img class="h-12 px-1" src="img/tools/android-studio.webp" alt="Logo android-studio"></img>
+							<img class="h-12 px-1" src="img/tools/office.webp" alt="Logo Office 365"></img>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center">
+				<div class="mouse"></div>
+			</div>
+			<div id="projects" class="h-full flex flex-col items-center justify-center pt-36 pb-16">
+				<p class="text-center text-xl font-bold">
+					Mes projets (jeux vidéo)
+				</p>
+				<p class="text-center text-base italic pt-4">
+					(Retrouvez mes autres projets sur GitHub et GitLab)
+				</p>
+				<div class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
+					<div class="carousel relative bg-white">
+						<div class="carousel-inner rounded-lg relative overflow-hidden w-full">
+							<!--Slide 1-->
+							<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+								checked="checked">
+							<div class="carousel-item absolute opacity-0" style="height:50vh;">
+								<div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div>
+							</div>
+							<label for="carousel-3"
+								class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+							<label for="carousel-2"
+								class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+							<!--Slide 2-->
+							<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+							<div class="carousel-item absolute opacity-0" style="height:50vh;">
+								<div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 2</div>
+							</div>
+							<label for="carousel-1"
+								class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+							<label for="carousel-3"
+								class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+							<!--Slide 3-->
+							<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+							<div class="carousel-item absolute opacity-0" style="height:50vh;">
+								<div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+							</div>
+							<label for="carousel-2"
+								class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+							<label for="carousel-1"
+								class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+							<!-- Add additional indicators for each slide-->
+							<ol class="carousel-indicators">
+								<li class="inline-block mr-3">
+									<label for="carousel-1"
+										class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+								</li>
+								<li class="inline-block mr-3">
+									<label for="carousel-2"
+										class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+								</li>
+								<li class="inline-block mr-3">
+									<label for="carousel-3"
+										class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="text-center text-lg font-bold pt-8">
+						Brink of Light
+					</div>
+					<div class="text-justify text-base pt-8">
+						Brink of Light est un jeu de type Roguelike jouable sur PC. Dans ce jeu le joueur incarne un feu follet partant à
+						l’aventure dans un donjon pour sauver son peuple de l'extinction après qu’une force démoniaque ait enlevé une grande
+						partie de la population.
+						(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
+							class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
+							class="font-semibold">Visual Studio</span>)
+					</div>
+					<div class="text-justify text-base pt-4">
+						<span class="font-bold">Cadre :</span>
+						Réalisation d’un projet dans le cadre du cours « Principes de conception et de développement de jeux vidéo » en
+						automne 2020.
+					</div>
+					<div class="text-justify text-base pt-4">
+						<span class="font-bold">Tâches :</span>
+						<p class="marge">- <span class="marge">Responsable de l’implémentation de l’UI.</span></p>
+						<p class="marge">- <span class="marge">Statistiques des personnages.</span></p>
+						<p class="marge">- <span class="marge">Gestion de l’économie en jeu.</span></p>
+						<p class="marge">- <span class="marge">Animation des barres de vie et des dégâts et soins flottants.</span></p>
+						<p class="marge">- <span class="marge">Gestion de l’inventaire.</span></p>
+						<p class="marge">- <span class="marge">Échanges avec les personnages marchands.</span></p>
+						<p class="marge">- <span class="marge">Transition entre les salles et les scènes.</span></p>
+						<p class="marge">- <span class="marge">Paramètres audio et graphiques.</span></p>
+						<p class="marge">- <span class="marge">Gestion des menus.</span></p>
+						<p class="marge">- <span class="marge">Drops des personnages.</span></p>
+						<p class="marge">- <span class="marge">Cinématiques.</span></p>
+						<p class="marge">- <span class="marge">Participation à l’implémentation de certains mécanismes de base.</span></p>
+						<p class="marge">- <span class="marge">Gestion des niveaux de difficulté.</span></p>
+					</div>
+					<div class="text-justify text-base pt-4">
+						<span class="font-bold">Participants :</span>
+						Nathan Chevenard, Aymeric Damour, Florian Zeni et Guillaume Blanc de Lanaute.
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class="bg-gray-600 flex justify-center">
+			<span class="text-white p-2">Made with <i class="fas fa-heart text-red-600"></i> by WarTey</span>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 		<script src="js/app.js"></script>
-		<script src="js/scroll.js"></script>
 	</body>
 </html>
