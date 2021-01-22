@@ -1,0 +1,184 @@
+.items {
+	height: 50vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.carousel-gameone-open:checked + .carousel-gameone-item,
+.carousel-gametwo-open:checked + .carousel-gametwo-item,
+.carousel-gamethree-open:checked + .carousel-gamethree-item,
+.carousel-gamefour-open:checked + .carousel-gamefour-item,
+.carousel-gamefive-open:checked + .carousel-gamefive-item {
+	position: static;
+	opacity: 100;
+}
+
+.carousel-gameone-item,
+.carousel-gametwo-item,
+.carousel-gamethree-item ,
+.carousel-gamefour-item,
+.carousel-gamefive-item {
+	-webkit-transition: opacity 0.6s ease-out;
+	transition: opacity 0.6s ease-out;
+}
+
+.carousel-gameone-indicators,
+.carousel-gametwo-indicators,
+.carousel-gamethree-indicators,
+.carousel-gamefour-indicators,
+.carousel-gamefive-indicators {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 2%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 10;
+}
+
+#carousel-gameone-1:checked ~ .control-1,
+#carousel-gameone-2:checked ~ .control-2,
+#carousel-gameone-3:checked ~ .control-3,
+#carousel-gameone-4:checked ~ .control-4,
+#carousel-gameone-5:checked ~ .control-5,
+#carousel-gameone-6:checked ~ .control-6,
+#carousel-gametwo-1:checked ~ .control-1,
+#carousel-gametwo-2:checked ~ .control-2,
+#carousel-gametwo-3:checked ~ .control-3,
+#carousel-gametwo-4:checked ~ .control-4,
+#carousel-gametwo-5:checked ~ .control-5,
+#carousel-gamethree-1:checked ~ .control-1,
+#carousel-gamethree-2:checked ~ .control-2,
+#carousel-gamethree-3:checked ~ .control-3,
+#carousel-gamefour-1:checked ~ .control-1,
+#carousel-gamefour-2:checked ~ .control-2,
+#carousel-gamefour-3:checked ~ .control-3,
+#carousel-gamefour-4:checked ~ .control-4,
+#carousel-gamefour-5:checked ~ .control-5 ,
+#carousel-gamefive-1:checked ~ .control-1,
+#carousel-gamefive-2:checked ~ .control-2,
+#carousel-gamefive-3:checked ~ .control-3,
+#carousel-gamefive-4:checked ~ .control-4 {
+	display: block;
+}
+
+#carousel-gameone-1:checked ~ .control-1 ~ .carousel-gameone-indicators li:nth-child(1) .carousel-gameone-bullet,
+#carousel-gameone-2:checked ~ .control-2 ~ .carousel-gameone-indicators li:nth-child(2) .carousel-gameone-bullet,
+#carousel-gameone-3:checked ~ .control-3 ~ .carousel-gameone-indicators li:nth-child(3) .carousel-gameone-bullet,
+#carousel-gameone-4:checked ~ .control-4 ~ .carousel-gameone-indicators li:nth-child(4) .carousel-gameone-bullet,
+#carousel-gameone-5:checked ~ .control-5 ~ .carousel-gameone-indicators li:nth-child(5) .carousel-gameone-bullet,
+#carousel-gameone-6:checked ~ .control-6 ~ .carousel-gameone-indicators li:nth-child(6) .carousel-gameone-bullet,
+#carousel-gametwo-1:checked ~ .control-1 ~ .carousel-gametwo-indicators li:nth-child(1) .carousel-gametwo-bullet,
+#carousel-gametwo-2:checked ~ .control-2 ~ .carousel-gametwo-indicators li:nth-child(2) .carousel-gametwo-bullet,
+#carousel-gametwo-3:checked ~ .control-3 ~ .carousel-gametwo-indicators li:nth-child(3) .carousel-gametwo-bullet,
+#carousel-gametwo-4:checked ~ .control-4 ~ .carousel-gametwo-indicators li:nth-child(4) .carousel-gametwo-bullet,
+#carousel-gametwo-5:checked ~ .control-5 ~ .carousel-gametwo-indicators li:nth-child(5) .carousel-gametwo-bullet,
+#carousel-gamethree-1:checked ~ .control-1 ~ .carousel-gamethree-indicators li:nth-child(1) .carousel-gamethree-bullet,
+#carousel-gamethree-2:checked ~ .control-2 ~ .carousel-gamethree-indicators li:nth-child(2) .carousel-gamethree-bullet,
+#carousel-gamethree-3:checked ~ .control-3 ~ .carousel-gamethree-indicators li:nth-child(3) .carousel-gamethree-bullet,
+#carousel-gamefour-1:checked ~ .control-1 ~ .carousel-gamefour-indicators li:nth-child(1) .carousel-gamefour-bullet,
+#carousel-gamefour-2:checked ~ .control-2 ~ .carousel-gamefour-indicators li:nth-child(2) .carousel-gamefour-bullet,
+#carousel-gamefour-3:checked ~ .control-3 ~ .carousel-gamefour-indicators li:nth-child(3) .carousel-gamefour-bullet,
+#carousel-gamefour-4:checked ~ .control-4 ~ .carousel-gamefour-indicators li:nth-child(4) .carousel-gamefour-bullet,
+#carousel-gamefour-5:checked ~ .control-5 ~ .carousel-gamefour-indicators li:nth-child(5) .carousel-gamefour-bullet,
+#carousel-gamefive-1:checked ~ .control-1 ~ .carousel-gamefive-indicators li:nth-child(1) .carousel-gamefive-bullet,
+#carousel-gamefive-2:checked ~ .control-2 ~ .carousel-gamefive-indicators li:nth-child(2) .carousel-gamefive-bullet,
+#carousel-gamefive-3:checked ~ .control-3 ~ .carousel-gamefive-indicators li:nth-child(3) .carousel-gamefive-bullet,
+#carousel-gamefive-4:checked ~ .control-4 ~ .carousel-gamefive-indicators li:nth-child(4) .carousel-gamefive-bullet {
+	color: rgb(75, 85, 99);
+}
+
+.bg-gameone-1 {
+	background-image: url("../img/game-one/1.webp");
+}
+
+.bg-gameone-2 {
+	background-image: url("../img/game-one/2.webp");
+}
+
+.bg-gameone-3 {
+	background-image: url("../img/game-one/3.webp");
+}
+
+.bg-gameone-4 {
+	background-image: url("../img/game-one/4.webp");
+}
+
+.bg-gameone-5 {
+	background-image: url("../img/game-one/5.webp");
+}
+
+.bg-gameone-6 {
+	background-image: url("../img/game-one/6.webp");
+}
+
+.bg-gametwo-1 {
+	background-image: url("../img/game-two/1.webp");
+}
+
+.bg-gametwo-2 {
+	background-image: url("../img/game-two/2.webp");
+}
+
+.bg-gametwo-3 {
+	background-image: url("../img/game-two/3.webp");
+}
+
+.bg-gametwo-4 {
+	background-image: url("../img/game-two/4.webp");
+}
+
+.bg-gametwo-5 {
+	background-image: url("../img/game-two/5.webp");
+}
+
+.bg-gamethree-1 {
+	background-image: url("../img/game-three/1.webp");
+}
+
+.bg-gamethree-2 {
+	background-image: url("../img/game-three/2.webp");
+}
+
+.bg-gamethree-3 {
+	background-image: url("../img/game-three/3.webp");
+}
+
+.bg-gamefour-1 {
+	background-image: url("../img/game-four/1.webp");
+}
+
+.bg-gamefour-2 {
+	background-image: url("../img/game-four/2.webp");
+}
+
+.bg-gamefour-3 {
+	background-image: url("../img/game-four/3.webp");
+}
+
+.bg-gamefour-4 {
+	background-image: url("../img/game-four/4.webp");
+}
+
+.bg-gamefour-5 {
+	background-image: url("../img/game-four/5.webp");
+}
+
+.bg-gamefive-1 {
+	background-image: url("../img/game-five/1.webp");
+}
+
+.bg-gamefive-2 {
+	background-image: url("../img/game-five/2.webp");
+}
+
+.bg-gamefive-3 {
+	background-image: url("../img/game-five/3.webp");
+}
+
+.bg-gamefive-4 {
+	background-image: url("../img/game-five/4.webp");
+}
