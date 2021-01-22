@@ -1,646 +1,652 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description"
-			content="Portfolio de Guillaume Blanc de Lanaute. Étudiant à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo).">
-		<meta name="author" content="Guillaume Blanc de Lanaute">
-		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-			crossorigin="anonymous">
-		<link href="css/styles.css" rel="stylesheet">
-		<link href="css/carousel.css" rel="stylesheet">
-		<link href="css/mouse-scroll.css" rel="stylesheet">
-		<title>WarTey</title>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	</head>
-	<body>
-		<div id="particles-js" class="h-screen w-full fixed bg-gray-50"></div>
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-600">
-			<div id="presentation" class="h-full flex flex-col items-center justify-center pt-32 pb-36">
-				<img class="w-60 text-center" src="img/profil.webp" alt="Image de profil"></img>
-				<blockquote class="pt-6 quote">
-					<p class="text-center text-lg">
-						Bonjour!
-					</p>
-					<p class="pt-6 text-lg text-justify">
-						Je m'appelle <span class="font-bold">Guillaume Blanc de Lanaute</span> et je suis actuellement en <span class="font-bold">double diplôme</span>
-						à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo) ainsi qu'à l'Institut supérieur de
-						l'électronique et du numérique (cybersécurité). <span class="font-bold">Passionné par l'univers de la
-						programmation et des jeux vidéo</span>, je suis à la recherche d'un <span class="font-bold">stage</span> de fin d'étude dans le développement de jeux vidéo
-						(juillet 2021)
-						pour mettre en application mes connaissances mais aussi pour en acquérir.
-					</p>
-					<div class="pt-6 text-center">
-						<p class="text-base">N'hésitez pas à me contacter pour toute information complémentaire :</p>
-						<div class="pt-4 text-base">
-							<a class="link mr-2" href="https://www.linkedin.com/in/guillaume-blanc-de-lanaute/" target="_blank">
-								<i class="fab fa-linkedin-in fa-lg px-1"></i>
-								LinkedIn
-							</a>
-							<a class="link mr-2" href="mailto:guillaume.blanc-de-lanaute@outlook.com" target="_blank">
-								<i class="fas fa-at fa-lg px-1"></i>
-								Mail
-							</a>
-							<a class="link mr-2" href="https://github.com/WarTey" target="_blank">
-								<i class="fab fa-github fa-lg px-1"></i>
-								GitHub
-							</a>
-							<a class="link mr-2" href="https://gitlab.com/WarTey" target="_blank">
-								<i class="fab fa-gitlab fa-lg px-1"></i>
-								GitLab
-							</a>
-							<a class="link mr-2" href="ressources/CV.pdf" target="_blank">
-								<i class="far fa-file-pdf fa-lg px-1"></i>
-								CV
-							</a>
-						</div>
-					</div>
-				</blockquote>
-			</div>
-			<div class="flex justify-center">
-				<div class="mouse"></div>
-			</div>
-			<div id="skills" class="h-full flex flex-col items-center justify-center py-36">
-				<p class="text-center text-xl font-bold">
-					Mes compétences
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Portfolio de Guillaume Blanc de Lanaute. Étudiant à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo).">
+	<meta name="author" content="Guillaume Blanc de Lanaute">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/carousel.css" rel="stylesheet">
+	<link href="css/mouse-scroll.css" rel="stylesheet">
+	<title>WarTey</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+	<div id="particles-js" class="h-screen w-full fixed bg-gray-50"></div>
+	<div class="text-sm mt-2 bg-gray-600 text-gray-50 px-1 absolute rounded-lg bg-opacity-50 shadow-lg hidden"
+		id="tooltip">Tooltip</div>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-600">
+		<div id="presentation" class="h-full flex flex-col items-center justify-center pt-32 pb-36">
+			<img class="w-60 text-center" src="img/profil.webp" alt="Image de profil"></img>
+			<blockquote class="pt-6 quote">
+				<p class="text-center text-lg">
+					Bonjour!
 				</p>
-				<p class="text-center text-base italic pt-4">
-					(Technologies, moteurs de jeux et langages utilisés quotidiennement ou occasionnellement)
+				<p class="pt-6 text-lg text-justify">
+					Je m'appelle <span class="font-bold">Guillaume Blanc de Lanaute</span> et je suis actuellement en
+					<span class="font-bold">double diplôme</span>
+					à l'Université du Québec à Chicoutimi en Maîtrise en informatique (jeux vidéo) ainsi qu'à l'Institut
+					supérieur de
+					l'électronique et du numérique (cybersécurité). <span class="font-bold">Passionné par l'univers de
+						la
+						programmation et des jeux vidéo</span>, je suis à la recherche d'un <span
+						class="font-bold">stage</span> de fin d'étude dans le développement de jeux vidéo
+					(juillet 2021)
+					pour mettre en application mes connaissances mais aussi pour en acquérir.
 				</p>
-				<div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-3 gap-8 pt-8">
-					<div class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1">
-						<div class="text-center text-lg font-semibold">
-							Langages
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/languages/c++.webp" alt="Logo C++"></img>
-							<img class="h-12 px-1" src="img/languages/c-sharp.webp" alt="Logo C#"></img>
-							<img class="h-12 px-1" src="img/languages/c.webp" alt="Logo C"></img>
-							<img class="h-12 px-1" src="img/languages/python.webp" alt="Logo Python"></img>
-							<img class="h-12 px-1" src="img/languages/java.webp" alt="Logo Java"></img>
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/languages/js.webp" alt="Logo JS"></img>
-							<img class="h-12 px-1" src="img/languages/rust.webp" alt="Logo Rust"></img>
-							<img class="h-12 px-1" src="img/languages/ruby.webp" alt="Logo Ruby"></img>
-							<img class="h-12 px-1" src="img/languages/php.webp" alt="Logo PHP"></img>
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/languages/html5.webp" alt="Logo HTML"></img>
-							<img class="h-12 px-1" src="img/languages/css3.webp" alt="Logo CSS"></img>
-							<img class="h-12 px-1" src="img/languages/sql.webp" alt="Logo SQL"></img>
-							<img class="h-12 px-1" src="img/languages/haskell.webp" alt="Logo Haskell"></img>
-						</div>
+				<div class="pt-6 text-center">
+					<p class="text-base">N'hésitez pas à me contacter pour toute information complémentaire :</p>
+					<div class="pt-4 text-base">
+						<a class="link mr-2" href="https://www.linkedin.com/in/guillaume-blanc-de-lanaute/"
+							target="_blank">
+							<i class="fab fa-linkedin-in fa-lg px-1"></i>
+							LinkedIn
+						</a>
+						<a class="link mr-2" href="mailto:guillaume.blanc-de-lanaute@outlook.com" target="_blank">
+							<i class="fas fa-at fa-lg px-1"></i>
+							Mail
+						</a>
+						<a class="link mr-2" href="https://github.com/WarTey" target="_blank">
+							<i class="fab fa-github fa-lg px-1"></i>
+							GitHub
+						</a>
+						<a class="link mr-2" href="https://gitlab.com/WarTey" target="_blank">
+							<i class="fab fa-gitlab fa-lg px-1"></i>
+							GitLab
+						</a>
+						<a class="link mr-2" href="ressources/CV.pdf" target="_blank">
+							<i class="far fa-file-pdf fa-lg px-1"></i>
+							CV
+						</a>
 					</div>
-					<div class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1">
-						<div class="text-center text-lg font-semibold">
-							Moteurs de jeux
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/engines/unity.webp" alt="Logo Unity"></img>
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/engines/unreal.webp" alt="Logo Unreal"></img>
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/engines/pygame.webp" alt="Logo Pygame"></img>
-						</div>
+				</div>
+			</blockquote>
+		</div>
+		<div class="flex justify-center">
+			<div class="mouse"></div>
+		</div>
+		<div id="skills" class="h-full flex flex-col items-center justify-center py-36">
+			<p class="text-center text-xl font-bold">
+				Mes compétences
+			</p>
+			<p class="text-center text-base italic pt-4">
+				(Technologies, moteurs de jeux et langages utilisés quotidiennement ou occasionnellement)
+			</p>
+			<div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-3 gap-8 pt-8">
+				<div
+					class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1">
+					<div class="text-center text-lg font-semibold">
+						Langages
 					</div>
-					<div class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-start-1 col-span-1 sm:col-start-2 sm:col-span-2 lg:col-start-3 lg:col-span-1">
-						<div class="text-center text-lg font-semibold">
-							Outils
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/tools/visual-studio.webp" alt="Logo Visual Studio"></img>
-							<img class="h-12 px-1" src="img/tools/vscode.webp" alt="Logo VSCode"></img>
-							<img class="h-12 px-1" src="img/tools/git.webp" alt="Logo Git"></img>
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/tools/trello.webp" alt="Logo Trello"></img>
-							<img class="h-12 px-1" src="img/tools/jetbrains.webp" alt="Logo JetBrains"></img>
-							<img class="h-12 px-1" src="img/tools/xcode.webp" alt="Logo Xcode"></img>
-						</div>
-						<div class="pt-4 text-center flex justify-center">
-							<img class="h-12 px-1" src="img/tools/android-studio.webp" alt="Logo android-studio"></img>
-							<img class="h-12 px-1" src="img/tools/office.webp" alt="Logo Office 365"></img>
-						</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="cpp-lang" class="h-12 px-1" src="img/languages/c++.webp" alt="Logo C++"></img>
+						<img id="cs-lang" class="h-12 px-1" src="img/languages/c-sharp.webp" alt="Logo C#"></img>
+						<img id="c-lang" class="h-12 px-1" src="img/languages/c.webp" alt="Logo C"></img>
+						<img id="python-lang" class="h-12 px-1" src="img/languages/python.webp" alt="Logo Python"></img>
+						<img id="java-lang" class="h-12 px-1" src="img/languages/java.webp" alt="Logo Java"></img>
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="js-lang" class="h-12 px-1" src="img/languages/js.webp" alt="Logo JS"></img>
+						<img id="rust-lang" class="h-12 px-1" src="img/languages/rust.webp" alt="Logo Rust"></img>
+						<img id="ruby-lang" class="h-12 px-1" src="img/languages/ruby.webp" alt="Logo Ruby"></img>
+						<img id="php-lang" class="h-12 px-1" src="img/languages/php.webp" alt="Logo PHP"></img>
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="html5-lang" class="h-12 px-1" src="img/languages/html5.webp" alt="Logo HTML"></img>
+						<img id="css3-lang" class="h-12 px-1" src="img/languages/css3.webp" alt="Logo CSS"></img>
+						<img id="sql-lang" class="h-12 px-1" src="img/languages/sql.webp" alt="Logo SQL"></img>
+						<img id="haskell-lang" class="h-12 px-1" src="img/languages/haskell.webp"
+							alt="Logo Haskell"></img>
+					</div>
+				</div>
+				<div
+					class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1">
+					<div class="text-center text-lg font-semibold">
+						Moteurs de jeux
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="unity-lang" class="h-12 px-1" src="img/engines/unity.webp" alt="Logo Unity"></img>
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="unreal-lang" class="h-12 px-1" src="img/engines/unreal.webp" alt="Logo Unreal"></img>
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="pygame-lang" class="h-12 px-1" src="img/engines/pygame.webp" alt="Logo Pygame"></img>
+					</div>
+				</div>
+				<div
+					class="bg-white rounded-lg shadow-lg mt-4 p-4 hover:shadow-xl transition-shadow duration-300 col-start-1 col-span-1 sm:col-start-2 sm:col-span-2 lg:col-start-3 lg:col-span-1">
+					<div class="text-center text-lg font-semibold">
+						Outils
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="vs-lang" class="h-12 px-1" src="img/tools/visual-studio.webp"
+							alt="Logo Visual Studio"></img>
+						<img id="vscode-lang" class="h-12 px-1" src="img/tools/vscode.webp" alt="Logo VSCode"></img>
+						<img id="git-lang" class="h-12 px-1" src="img/tools/git.webp" alt="Logo Git"></img>
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="trello-lang" class="h-12 px-1" src="img/tools/trello.webp" alt="Logo Trello"></img>
+						<img id="jetbrains-lang" class="h-12 px-1" src="img/tools/jetbrains.webp"
+							alt="Logo JetBrains"></img>
+						<img id="xcode-lang" class="h-12 px-1" src="img/tools/xcode.webp" alt="Logo Xcode"></img>
+					</div>
+					<div class="pt-4 text-center flex justify-center">
+						<img id="androidstudio-lang" class="h-12 px-1" src="img/tools/android-studio.webp"
+							alt="Logo android-studio"></img>
+						<img id="office-lang" class="h-12 px-1" src="img/tools/office.webp" alt="Logo Office 365"></img>
 					</div>
 				</div>
 			</div>
-			<div class="flex justify-center">
-				<div class="mouse"></div>
+		</div>
+		<div class="flex justify-center">
+			<div class="mouse"></div>
+		</div>
+		<div id="projects" class="h-full flex flex-col items-center justify-center pt-36 pb-16">
+			<p class="text-center text-xl font-bold">
+				Mes projets (jeux vidéo)
+			</p>
+			<p class="text-center text-base italic pt-4">
+				<span>(Retrouvez mes autres projets sur</span>
+				<a class="link font-semibold" href="https://github.com/WarTey" target="_blank">GitHub</a>
+				<span>et</span>
+				<a class="link font-semibold" href="https://gitlab.com/WarTey" target="_blank">GitLab</a><span>)</span>
+			</p>
+			<div
+				class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
+				<div class="carousel-gameone relative bg-white">
+					<div class="carousel-gameone-inner rounded-lg relative overflow-hidden w-full">
+						<input class="carousel-gameone-open" type="radio" id="carousel-gameone-1"
+							name="carousel-gameone" aria-hidden="true" hidden="" checked="checked">
+						<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-1 bg-gray-300"></div>
+						<label for="carousel-gameone-6"
+							class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gameone-2"
+							class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gameone-open" type="radio" id="carousel-gameone-2"
+							name="carousel-gameone" aria-hidden="true" hidden="">
+						<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-2 bg-gray-300"></div>
+						<label for="carousel-gameone-1"
+							class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gameone-3"
+							class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gameone-open" type="radio" id="carousel-gameone-3"
+							name="carousel-gameone" aria-hidden="true" hidden="">
+						<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-3 bg-gray-300"></div>
+						<label for="carousel-gameone-2"
+							class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gameone-4"
+							class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gameone-open" type="radio" id="carousel-gameone-4"
+							name="carousel-gameone" aria-hidden="true" hidden="">
+						<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-4 bg-gray-300"></div>
+						<label for="carousel-gameone-3"
+							class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gameone-5"
+							class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gameone-open" type="radio" id="carousel-gameone-5"
+							name="carousel-gameone" aria-hidden="true" hidden="">
+						<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-5 bg-gray-300"></div>
+						<label for="carousel-gameone-4"
+							class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gameone-6"
+							class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gameone-open" type="radio" id="carousel-gameone-6"
+							name="carousel-gameone" aria-hidden="true" hidden="">
+						<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-6 bg-gray-300"></div>
+						<label for="carousel-gameone-5"
+							class="prev control-6 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gameone-1"
+							class="next control-6 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<ol class="carousel-gameone-indicators">
+							<li class="inline-block mr-3">
+								<label for="carousel-gameone-1"
+									class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gameone-2"
+									class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gameone-3"
+									class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gameone-4"
+									class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gameone-5"
+									class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gameone-6"
+									class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<div class="text-center text-lg font-bold pt-8">
+					Brink of Light
+				</div>
+				<div class="text-justify text-base pt-8">
+					Brink of Light est un jeu de type Roguelike jouable sur PC. Dans ce jeu le joueur incarne un feu
+					follet partant à
+					l’aventure dans un donjon pour sauver son peuple de l'extinction après qu’une force démoniaque ait
+					enlevé une grande
+					partie de la population.
+					(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
+						class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
+						class="font-semibold">Visual Studio</span>)
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Cadre :</span>
+					Réalisation d’un projet dans le cadre du cours « Principes de conception et de développement de jeux
+					vidéo » en
+					automne 2020.
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Tâches :</span>
+					<p class="marge">- <span class="marge">Responsable de l’implémentation de l’UI.</span></p>
+					<p class="marge">- <span class="marge">Statistiques des personnages.</span></p>
+					<p class="marge">- <span class="marge">Gestion de l’économie en jeu.</span></p>
+					<p class="marge">- <span class="marge">Animation des barres de vie et des dégâts et soins
+							flottants.</span></p>
+					<p class="marge">- <span class="marge">Gestion de l’inventaire.</span></p>
+					<p class="marge">- <span class="marge">Échanges avec les personnages marchands.</span></p>
+					<p class="marge">- <span class="marge">Transition entre les salles et les scènes.</span></p>
+					<p class="marge">- <span class="marge">Paramètres audio et graphiques.</span></p>
+					<p class="marge">- <span class="marge">Gestion des menus.</span></p>
+					<p class="marge">- <span class="marge">Drops des personnages.</span></p>
+					<p class="marge">- <span class="marge">Cinématiques.</span></p>
+					<p class="marge">- <span class="marge">Participation à l’implémentation de certains mécanismes de
+							base.</span></p>
+					<p class="marge">- <span class="marge">Gestion des niveaux de difficulté.</span></p>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Participants :</span>
+					Nathan Chevenard, Aymeric Damour, Florian Zeni et Guillaume Blanc de Lanaute.
+				</div>
 			</div>
-			<div id="projects" class="h-full flex flex-col items-center justify-center pt-36 pb-16">
-				<p class="text-center text-xl font-bold">
-					Mes projets (jeux vidéo)
-				</p>
-				<p class="text-center text-base italic pt-4">
-					<span>(Retrouvez mes autres projets sur</span>
-					<a class="link font-semibold" href="https://github.com/WarTey" target="_blank">GitHub</a>
+			<div
+				class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
+				<div class="carousel-gametwo relative bg-white">
+					<div class="carousel-gametwo-inner rounded-lg relative overflow-hidden w-full">
+						<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-1"
+							name="carousel-gametwo" aria-hidden="true" hidden="" checked="checked">
+						<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-1 bg-gray-300"></div>
+						<label for="carousel-gametwo-5"
+							class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gametwo-2"
+							class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-2"
+							name="carousel-gametwo" aria-hidden="true" hidden="">
+						<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-2 bg-gray-300"></div>
+						<label for="carousel-gametwo-1"
+							class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gametwo-3"
+							class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-3"
+							name="carousel-gametwo" aria-hidden="true" hidden="">
+						<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-3 bg-gray-300"></div>
+						<label for="carousel-gametwo-2"
+							class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gametwo-4"
+							class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-4"
+							name="carousel-gametwo" aria-hidden="true" hidden="">
+						<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-4 bg-gray-300"></div>
+						<label for="carousel-gametwo-3"
+							class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gametwo-5"
+							class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-5"
+							name="carousel-gametwo" aria-hidden="true" hidden="">
+						<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-5 bg-gray-300"></div>
+						<label for="carousel-gametwo-4"
+							class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gametwo-1"
+							class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<ol class="carousel-gametwo-indicators">
+							<li class="inline-block mr-3">
+								<label for="carousel-gametwo-1"
+									class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gametwo-2"
+									class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gametwo-3"
+									class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gametwo-4"
+									class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gametwo-5"
+									class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<div class="text-center text-lg font-bold pt-8">
+					BreuMage
+				</div>
+				<div class="text-justify text-base pt-8">
+					Deux magiciens ayant l'habitude de s'entraider pour concocter leurs potions se retrouvent
+					soudainement l'un contre
+					l'autre après que leur boule de cristal se soit détraquée !
+					Attrapez votre manette afin de collecter tous les ingrédients nécessaires à votre potion et ainsi
+					prouver que vous êtes
+					le meilleur magicien ! Mais faites attention à ce que votre feu ne s'éteigne pas ou il pourrait vous
+					arriver malheur !
+					(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
+						class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
+						class="font-semibold">Visual Studio</span>)
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Cadre :</span>
+					<p class="marge">- <span class="marge">Participation à la WonderJam édition automne 2020 (48h) avec
+							le thème « quand la magie tourne mal ».</span></p>
+					<p class="marge">- <span class="marge">Choix entre les styles « exploration » et « multijoueur
+							».</span></p>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Tâches :</span>
+					<p class="marge">- <span class="marge">Coupage du bois.</span></p>
+					<p class="marge">- <span class="marge">Ramassage des ingrédients.</span></p>
+					<p class="marge">- <span class="marge">Remplissage du chaudron.</span></p>
+					<p class="marge">- <span class="marge">Gestion de l’inventaire.</span></p>
+					<p class="marge">- <span class="marge">Alimentation du feu.</span></p>
+					</p>
+					<p class="marge">- <span class="marge">Gestion des niveaux de difficulté.</span></p>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Liens :</span>
+					<a class="link font-semibold" href="https://soplump.itch.io/breumage" target="_blank">BreuMage</a>
 					<span>et</span>
-					<a class="link font-semibold" href="https://gitlab.com/WarTey" target="_blank">GitLab</a><span>)</span>
-				</p>
-				<div class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
-					<div class="carousel-gameone relative bg-white">
-						<div class="carousel-gameone-inner rounded-lg relative overflow-hidden w-full">
-							<!--Slide 1-->
-							<input class="carousel-gameone-open" type="radio" id="carousel-gameone-1" name="carousel-gameone" aria-hidden="true" hidden=""
-								checked="checked">
-							<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-1 bg-gray-300"></div>
-							<label for="carousel-gameone-6"
-								class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gameone-2"
-								class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 2-->
-							<input class="carousel-gameone-open" type="radio" id="carousel-gameone-2" name="carousel-gameone" aria-hidden="true" hidden="">
-							<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-2 bg-gray-300"></div>
-							<label for="carousel-gameone-1"
-								class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gameone-3"
-								class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 3-->
-							<input class="carousel-gameone-open" type="radio" id="carousel-gameone-3" name="carousel-gameone" aria-hidden="true" hidden="">
-							<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-3 bg-gray-300"></div>
-							<label for="carousel-gameone-2"
-								class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gameone-4"
-								class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 4-->
-							<input class="carousel-gameone-open" type="radio" id="carousel-gameone-4" name="carousel-gameone" aria-hidden="true" hidden="">
-							<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-4 bg-gray-300"></div>
-							<label for="carousel-gameone-3"
-								class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gameone-5"
-								class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 5-->
-							<input class="carousel-gameone-open" type="radio" id="carousel-gameone-5" name="carousel-gameone" aria-hidden="true" hidden="">
-							<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-5 bg-gray-300"></div>
-							<label for="carousel-gameone-4"
-								class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gameone-6"
-								class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 5-->
-							<input class="carousel-gameone-open" type="radio" id="carousel-gameone-6" name="carousel-gameone" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gameone-item absolute opacity-0 items bg-gameone-6 bg-gray-300"></div>
-							<label for="carousel-gameone-5"
-								class="prev control-6 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gameone-1"
-								class="next control-6 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!-- Add additional indicators for each slide-->
-							<ol class="carousel-gameone-indicators">
-								<li class="inline-block mr-3">
-									<label for="carousel-gameone-1"
-										class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gameone-2"
-										class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gameone-3"
-										class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gameone-4"
-										class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gameone-5"
-										class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gameone-6"
-										class="carousel-gameone-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-							</ol>
-						</div>
-					</div>
-					<div class="text-center text-lg font-bold pt-8">
-						Brink of Light
-					</div>
-					<div class="text-justify text-base pt-8">
-						Brink of Light est un jeu de type Roguelike jouable sur PC. Dans ce jeu le joueur incarne un feu follet partant à
-						l’aventure dans un donjon pour sauver son peuple de l'extinction après qu’une force démoniaque ait enlevé une grande
-						partie de la population.
-						(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
-							class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
-							class="font-semibold">Visual Studio</span>)
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Cadre :</span>
-						Réalisation d’un projet dans le cadre du cours « Principes de conception et de développement de jeux vidéo » en
-						automne 2020.
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Tâches :</span>
-						<p class="marge">- <span class="marge">Responsable de l’implémentation de l’UI.</span></p>
-						<p class="marge">- <span class="marge">Statistiques des personnages.</span></p>
-						<p class="marge">- <span class="marge">Gestion de l’économie en jeu.</span></p>
-						<p class="marge">- <span class="marge">Animation des barres de vie et des dégâts et soins flottants.</span></p>
-						<p class="marge">- <span class="marge">Gestion de l’inventaire.</span></p>
-						<p class="marge">- <span class="marge">Échanges avec les personnages marchands.</span></p>
-						<p class="marge">- <span class="marge">Transition entre les salles et les scènes.</span></p>
-						<p class="marge">- <span class="marge">Paramètres audio et graphiques.</span></p>
-						<p class="marge">- <span class="marge">Gestion des menus.</span></p>
-						<p class="marge">- <span class="marge">Drops des personnages.</span></p>
-						<p class="marge">- <span class="marge">Cinématiques.</span></p>
-						<p class="marge">- <span class="marge">Participation à l’implémentation de certains mécanismes de base.</span></p>
-						<p class="marge">- <span class="marge">Gestion des niveaux de difficulté.</span></p>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Participants :</span>
-						Nathan Chevenard, Aymeric Damour, Florian Zeni et Guillaume Blanc de Lanaute.
+					<a class="link font-semibold" href="https://gitlab.com/SoPlump/wonderjam_uqac2020s1"
+						target="_blank">GitLab</a>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Participants :</span>
+					Sylvain Franco, Antonin Gaboriau, Pierre Lepercq, Mayeul Marsaut, Sophie Raudrant et Guillaume Blanc
+					de Lanaute.
+				</div>
+			</div>
+			<div
+				class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
+				<div class="carousel-gamefive relative bg-white">
+					<div class="carousel-gamefive-inner rounded-lg relative overflow-hidden w-full">
+						<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-1"
+							name="carousel-gamefive" aria-hidden="true" hidden="" checked="checked">
+						<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-1 bg-gray-300"></div>
+						<label for="carousel-gamefive-4"
+							class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefive-2"
+							class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-2"
+							name="carousel-gamefive" aria-hidden="true" hidden="">
+						<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-2 bg-gray-300"></div>
+						<label for="carousel-gamefive-1"
+							class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefive-3"
+							class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-3"
+							name="carousel-gamefive" aria-hidden="true" hidden="">
+						<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-3 bg-gray-300"></div>
+						<label for="carousel-gamefive-2"
+							class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefive-4"
+							class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-4"
+							name="carousel-gamefive" aria-hidden="true" hidden="">
+						<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-4 bg-gray-300"></div>
+						<label for="carousel-gamefive-3"
+							class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefive-1"
+							class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<ol class="carousel-gamefive-indicators">
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefive-1"
+									class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefive-2"
+									class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefive-3"
+									class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefive-4"
+									class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+						</ol>
 					</div>
 				</div>
-				<div
-					class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
-					<div class="carousel-gametwo relative bg-white">
-						<div class="carousel-gametwo-inner rounded-lg relative overflow-hidden w-full">
-							<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-1" name="carousel-gametwo" aria-hidden="true"
-								hidden="" checked="checked">
-							<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-1 bg-gray-300"></div>
-							<label for="carousel-gametwo-5"
-								class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gametwo-2"
-								class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-							<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-2" name="carousel-gametwo" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-2 bg-gray-300"></div>
-							<label for="carousel-gametwo-1"
-								class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gametwo-3"
-								class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-3" name="carousel-gametwo" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-3 bg-gray-300"></div>
-							<label for="carousel-gametwo-2"
-								class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gametwo-4"
-								class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-4" name="carousel-gametwo" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-4 bg-gray-300"></div>
-							<label for="carousel-gametwo-3"
-								class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gametwo-5"
-								class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<input class="carousel-gametwo-open" type="radio" id="carousel-gametwo-5" name="carousel-gametwo" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gametwo-item absolute opacity-0 items bg-gametwo-5 bg-gray-300"></div>
-							<label for="carousel-gametwo-4"
-								class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gametwo-1"
-								class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-								<ol class="carousel-gametwo-indicators">
-								<li class="inline-block mr-3">
-									<label for="carousel-gametwo-1"
-										class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gametwo-2"
-										class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gametwo-3"
-										class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gametwo-4"
-										class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gametwo-5"
-										class="carousel-gametwo-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-							</ol>
-						</div>
-					</div>
-					<div class="text-center text-lg font-bold pt-8">
-						BreuMage
-					</div>
-					<div class="text-justify text-base pt-8">
-						Deux magiciens ayant l'habitude de s'entraider pour concocter leurs potions se retrouvent soudainement l'un contre
-						l'autre après que leur boule de cristal se soit détraquée !
-						Attrapez votre manette afin de collecter tous les ingrédients nécessaires à votre potion et ainsi prouver que vous êtes
-						le meilleur magicien ! Mais faites attention à ce que votre feu ne s'éteigne pas ou il pourrait vous arriver malheur !
-						(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
-							class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
-							class="font-semibold">Visual Studio</span>)
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Cadre :</span>
-						<p class="marge">- <span class="marge">Participation à la WonderJam édition automne 2020 (48h) avec le thème « quand la magie tourne mal ».</span></p>
-						<p class="marge">- <span class="marge">Choix entre les styles « exploration » et « multijoueur ».</span></p>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Tâches :</span>
-						<p class="marge">- <span class="marge">Coupage du bois.</span></p>
-						<p class="marge">- <span class="marge">Ramassage des ingrédients.</span></p>
-						<p class="marge">- <span class="marge">Remplissage du chaudron.</span></p>
-						<p class="marge">- <span class="marge">Gestion de l’inventaire.</span></p>
-						<p class="marge">- <span class="marge">Alimentation du feu.</span></p>
-						</p>
-						<p class="marge">- <span class="marge">Gestion des niveaux de difficulté.</span></p>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Liens :</span>
-						<a class="link font-semibold" href="https://soplump.itch.io/breumage" target="_blank">BreuMage</a>
-						<span>et</span>
-						<a class="link font-semibold" href="https://gitlab.com/SoPlump/wonderjam_uqac2020s1" target="_blank">GitLab</a>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Participants :</span>
-						Sylvain Franco, Antonin Gaboriau, Pierre Lepercq, Mayeul Marsaut, Sophie Raudrant et Guillaume Blanc de Lanaute.
+				<div class="text-center text-lg font-bold pt-8">
+					Rocket Launcher
+				</div>
+				<div class="text-justify text-base pt-8">
+					À l'aide de sa dextérité, le joueur devra propulser sa fusée à travers les différents niveaux pour
+					en venir à bout en
+					faisant attention de ne pas rentrer en collision avec les murs.
+					(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
+						class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
+						class="font-semibold">Visual
+						Studio</span>)
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Cadre :</span>
+					Projet personnel réalisé en automne 2020 pour prendre le moteur de jeu Unity en main.
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Tâches :</span>
+					L'intégralité du contenu sauf les particules qui apparaissent quand la fusée accélère, quand la
+					fusée rentre en collision ou quand c'est la fin d'un niveau.
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Lien :</span>
+					<a class="link font-semibold" href="https://github.com/WarTey/rocket_launcher"
+						target="_blank">GitHub</a>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Participant :</span>
+					Guillaume Blanc de Lanaute.
+				</div>
+			</div>
+			<div
+				class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
+				<div class="carousel-gamethree relative bg-white">
+					<div class="carousel-gamethree-inner rounded-lg relative overflow-hidden w-full">
+						<input class="carousel-gamethree-open" type="radio" id="carousel-gamethree-1"
+							name="carousel-gamethree" aria-hidden="true" hidden="" checked="checked">
+						<div class="carousel-gamethree-item absolute opacity-0 items bg-gamethree-1 bg-gray-300"></div>
+						<label for="carousel-gamethree-3"
+							class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamethree-2"
+							class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamethree-open" type="radio" id="carousel-gamethree-2"
+							name="carousel-gamethree" aria-hidden="true" hidden="">
+						<div class="carousel-gamethree-item absolute opacity-0 items bg-gamethree-2 bg-gray-300"></div>
+						<label for="carousel-gamethree-1"
+							class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamethree-3"
+							class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamethree-open" type="radio" id="carousel-gamethree-3"
+							name="carousel-gamethree" aria-hidden="true" hidden="">
+						<div class="carousel-gamethree-item absolute opacity-0 items bg-gamethree-3 bg-gray-300"></div>
+						<label for="carousel-gamethree-2"
+							class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamethree-1"
+							class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<ol class="carousel-gamethree-indicators">
+							<li class="inline-block mr-3">
+								<label for="carousel-gamethree-1"
+									class="carousel-gamethree-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamethree-2"
+									class="carousel-gamethree-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamethree-3"
+									class="carousel-gamethree-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+						</ol>
 					</div>
 				</div>
-				<div
-					class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
-					<div class="carousel-gamefive relative bg-white">
-						<div class="carousel-gamefive-inner rounded-lg relative overflow-hidden w-full">
-							<!--Slide 1-->
-							<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-1" name="carousel-gamefive"
-								aria-hidden="true" hidden="" checked="checked">
-							<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-1 bg-gray-300"></div>
-							<label for="carousel-gamefive-4"
-								class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefive-2"
-								class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 2-->
-							<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-2" name="carousel-gamefive"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-2 bg-gray-300"></div>
-							<label for="carousel-gamefive-1"
-								class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefive-3"
-								class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 3-->
-							<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-3" name="carousel-gamefive"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-3 bg-gray-300"></div>
-							<label for="carousel-gamefive-2"
-								class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefive-4"
-								class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 4-->
-							<input class="carousel-gamefive-open" type="radio" id="carousel-gamefive-4" name="carousel-gamefive"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamefive-item absolute opacity-0 items bg-gamefive-4 bg-gray-300"></div>
-							<label for="carousel-gamefive-3"
-								class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefive-1"
-								class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!-- Add additional indicators for each slide-->
-							<ol class="carousel-gamefive-indicators">
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefive-1"
-										class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefive-2"
-										class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefive-3"
-										class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefive-4"
-										class="carousel-gamefive-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-							</ol>
-						</div>
-					</div>
-					<div class="text-center text-lg font-bold pt-8">
-						Rocket Launcher
-					</div>
-					<div class="text-justify text-base pt-8">
-						À l'aide de sa dextérité, le joueur devra propulser sa fusée à travers les différents niveaux pour en venir à bout en
-						faisant attention de ne pas rentrer en collision avec les murs.
-						(<span class="font-semibold">Unity</span>, <span class="font-semibold">C#</span>, <span
-							class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span class="font-semibold">Visual
-							Studio</span>)
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Cadre :</span>
-						Projet personnel réalisé en automne 2020 pour prendre le moteur de jeu Unity en main.
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Tâches :</span>
-						L'intégralité du contenu sauf les particules qui apparaissent quand la fusée accélère, quand la fusée rentre en collision ou quand c'est la fin d'un niveau.
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Lien :</span>
-						<a class="link font-semibold" href="https://github.com/WarTey/rocket_launcher" target="_blank">GitHub</a>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Participant :</span>
-						Guillaume Blanc de Lanaute.
+				<div class="text-center text-lg font-bold pt-8">
+					Raven
+				</div>
+				<div class="text-justify text-base pt-8">
+					Adapter l'intelligence artificielle du projet Raven tiré du livre de Mat Buckland afin de
+					l'améliorer. Il s'agit ici d'une
+					simulation d'agents qui cherchent à s'entretuer en équipe ou individuellement.
+					(<span class="font-semibold">C++</span>, <span class="font-semibold">Git</span>, <span
+						class="font-semibold">Trello</span> et <span class="font-semibold">Visual Studio</span>)
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Cadre :</span>
+					Réalisation d’un projet dans le cadre du cours « Intelligence artificielle pour le jeu vidéo » en
+					automne 2020.
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Tâches :</span>
+					<p class="marge">- <span class="marge">Ajout du mode équipe.</span></p>
+					<p class="marge">- <span class="marge">Apprentissage d'un bot en observant le joueur humain (réseau
+							de neuronnes).</span></p>
+					<p class="marge">- <span class="marge">Participation à l’implémentation d'un nouveau but (se
+							cacher).</span>
+					</p>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Participants :</span>
+					Guilhem Cerba, De Almeida Antonin, Alexandre Duplay, Téo Martin, Quentin Yahia et Guillaume Blanc de
+					Lanaute.
+				</div>
+			</div>
+			<div
+				class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
+				<div class="carousel-gamefour relative bg-white">
+					<div class="carousel-gamefour-inner rounded-lg relative overflow-hidden w-full">
+						<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-1"
+							name="carousel-gamefour" aria-hidden="true" hidden="" checked="checked">
+						<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-1 bg-gray-300"></div>
+						<label for="carousel-gamefour-5"
+							class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefour-2"
+							class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-2"
+							name="carousel-gamefour" aria-hidden="true" hidden="">
+						<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-2 bg-gray-300"></div>
+						<label for="carousel-gamefour-1"
+							class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefour-3"
+							class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-3"
+							name="carousel-gamefour" aria-hidden="true" hidden="">
+						<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-3 bg-gray-300"></div>
+						<label for="carousel-gamefour-2"
+							class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefour-4"
+							class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-4"
+							name="carousel-gamefour" aria-hidden="true" hidden="">
+						<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-4 bg-gray-300"></div>
+						<label for="carousel-gamefour-3"
+							class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefour-5"
+							class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-5"
+							name="carousel-gamefour" aria-hidden="true" hidden="">
+						<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-5 bg-gray-300"></div>
+						<label for="carousel-gamefour-4"
+							class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+						<label for="carousel-gamefour-1"
+							class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+						<ol class="carousel-gamefour-indicators">
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefour-1"
+									class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefour-2"
+									class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefour-3"
+									class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefour-4"
+									class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+							<li class="inline-block mr-3">
+								<label for="carousel-gamefour-5"
+									class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
+							</li>
+						</ol>
 					</div>
 				</div>
-				<div
-					class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
-					<div class="carousel-gamethree relative bg-white">
-						<div class="carousel-gamethree-inner rounded-lg relative overflow-hidden w-full">
-							<!--Slide 1-->
-							<input class="carousel-gamethree-open" type="radio" id="carousel-gamethree-1" name="carousel-gamethree"
-								aria-hidden="true" hidden="" checked="checked">
-							<div class="carousel-gamethree-item absolute opacity-0 items bg-gamethree-1 bg-gray-300"></div>
-							<label for="carousel-gamethree-3"
-								class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamethree-2"
-								class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 2-->
-							<input class="carousel-gamethree-open" type="radio" id="carousel-gamethree-2" name="carousel-gamethree"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamethree-item absolute opacity-0 items bg-gamethree-2 bg-gray-300"></div>
-							<label for="carousel-gamethree-1"
-								class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamethree-3"
-								class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 3-->
-							<input class="carousel-gamethree-open" type="radio" id="carousel-gamethree-3" name="carousel-gamethree"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamethree-item absolute opacity-0 items bg-gamethree-3 bg-gray-300"></div>
-							<label for="carousel-gamethree-2"
-								class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamethree-1"
-								class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!-- Add additional indicators for each slide-->
-							<ol class="carousel-gamethree-indicators">
-								<li class="inline-block mr-3">
-									<label for="carousel-gamethree-1"
-										class="carousel-gamethree-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamethree-2"
-										class="carousel-gamethree-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamethree-3"
-										class="carousel-gamethree-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-							</ol>
-						</div>
-					</div>
-					<div class="text-center text-lg font-bold pt-8">
-						Raven
-					</div>
-					<div class="text-justify text-base pt-8">
-						Adapter l'intelligence artificielle du projet Raven tiré du livre de Mat Buckland afin de l'améliorer. Il s'agit ici d'une
-						simulation d'agents qui cherchent à s'entretuer en équipe ou individuellement.
-						(<span class="font-semibold">C++</span>, <span
-							class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span
-							class="font-semibold">Visual Studio</span>)
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Cadre :</span>
-						Réalisation d’un projet dans le cadre du cours « Intelligence artificielle pour le jeu vidéo » en
-						automne 2020.
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Tâches :</span>
-						<p class="marge">- <span class="marge">Ajout du mode équipe.</span></p>
-						<p class="marge">- <span class="marge">Apprentissage d'un bot en observant le joueur humain (réseau de neuronnes).</span></p>
-						<p class="marge">- <span class="marge">Participation à l’implémentation d'un nouveau but (se cacher).</span>
-						</p>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Participants :</span>
-						Guilhem Cerba, De Almeida Antonin, Alexandre Duplay, Téo Martin, Quentin Yahia et Guillaume Blanc de Lanaute.
-					</div>
+				<div class="text-center text-lg font-bold pt-8">
+					Diabollik
 				</div>
-				<div
-					class="bg-white rounded-lg shadow-lg mt-12 p-4 hover:shadow-xl transition-shadow duration-300 col-span-1 sm:col-span-2 lg:col-span-1 w-full">
-					<div class="carousel-gamefour relative bg-white">
-						<div class="carousel-gamefour-inner rounded-lg relative overflow-hidden w-full">
-							<!--Slide 1-->
-							<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-1" name="carousel-gamefour"
-								aria-hidden="true" hidden="" checked="checked">
-							<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-1 bg-gray-300"></div>
-							<label for="carousel-gamefour-5"
-								class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefour-2"
-								class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 2-->
-							<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-2" name="carousel-gamefour"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-2 bg-gray-300"></div>
-							<label for="carousel-gamefour-1"
-								class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefour-3"
-								class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 3-->
-							<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-3" name="carousel-gamefour"
-								aria-hidden="true" hidden="">
-							<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-3 bg-gray-300"></div>
-							<label for="carousel-gamefour-2"
-								class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefour-4"
-								class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 4-->
-							<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-4" name="carousel-gamefour" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-4 bg-gray-300"></div>
-							<label for="carousel-gamefour-3"
-								class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefour-5"
-								class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!--Slide 5-->
-							<input class="carousel-gamefour-open" type="radio" id="carousel-gamefour-5" name="carousel-gamefour" aria-hidden="true"
-								hidden="">
-							<div class="carousel-gamefour-item absolute opacity-0 items bg-gamefour-5 bg-gray-300"></div>
-							<label for="carousel-gamefour-4"
-								class="prev control-5 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-							<label for="carousel-gamefour-1"
-								class="next control-5 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-gray-600 hover:text-white rounded-full bg-white hover:bg-gray-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-							<!-- Add additional indicators for each slide-->
-							<ol class="carousel-gamefour-indicators">
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefour-1"
-										class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefour-2"
-										class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefour-3"
-										class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefour-4"
-										class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-								<li class="inline-block mr-3">
-									<label for="carousel-gamefour-5"
-										class="carousel-gamefour-bullet cursor-pointer block text-4xl text-white hover:text-gray-600">•</label>
-								</li>
-							</ol>
-						</div>
-					</div>
-					<div class="text-center text-lg font-bold pt-8">
-						Diabollik
-					</div>
-					<div class="text-justify text-base pt-8">
-						<span>Inspiré du jeu de société</span>
-						<a class="link font-semibold" href="https://fr.wikipedia.org/wiki/Diaballik" target="_blank">Diaballik</a>, Diabollik est un jeu de plateau où le joueur devra parcourir le plateau et arriver avec le ballon dans le camp
-							adverse. Le joueur pourra affronter un ami avec le mode 2 joueurs ou alors affronter une intelligence artifielle
-							avec différents niveaux de difficultées (algorithme minimax).
-						(<span class="font-semibold">Bibliothèque graphique maison</span>, <span class="font-semibold">C</span>, <span
-							class="font-semibold">Git</span>, <span class="font-semibold">Trello</span> et <span class="font-semibold">Visual
-							Studio Code</span>)
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Cadre :</span>
-						Réalisation d’un projet dans le cadre du cours « Algorithmique » en
-						automne 2018.
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Tâches :</span>
-						<p class="marge">- <span class="marge">Animations des personnages.</span></p>
-						<p class="marge">- <span class="marge">Intelligence artificielle des personnages.</span></p>
-						<p class="marge">- <span class="marge">Déplacement des personnages sur le plateau.</span></p>
-						<p class="marge">- <span class="marge">Participation à l'aide pour la sélection des déplacements.</span></p>
-						<p class="marge">- <span class="marge">Gestion des menus.</span></p>
-						<p class="marge">- <span class="marge">Participation à l'implémentation des mécaniques globales du jeu</span></p>
-					</div>
-					<div class="text-justify text-base pt-4">
-						<span class="font-bold">Participants :</span>
-						Allan Duee et Guillaume Blanc de Lanaute.
-					</div>
+				<div class="text-justify text-base pt-8">
+					<span>Inspiré du jeu de société</span>
+					<a class="link font-semibold" href="https://fr.wikipedia.org/wiki/Diaballik"
+						target="_blank">Diaballik</a>, Diabollik est un jeu de plateau où le joueur devra parcourir le
+					plateau et arriver avec le ballon dans le camp
+					adverse. Le joueur pourra affronter un ami avec le mode 2 joueurs ou alors affronter une
+					intelligence artifielle
+					avec différents niveaux de difficultées (algorithme minimax).
+					(<span class="font-semibold">Bibliothèque graphique maison</span>, <span
+						class="font-semibold">C</span>, <span class="font-semibold">Git</span>, <span
+						class="font-semibold">Trello</span> et <span class="font-semibold">Visual
+						Studio Code</span>)
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Cadre :</span>
+					Réalisation d’un projet dans le cadre du cours « Algorithmique » en
+					automne 2018.
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Tâches :</span>
+					<p class="marge">- <span class="marge">Animations des personnages.</span></p>
+					<p class="marge">- <span class="marge">Intelligence artificielle des personnages.</span></p>
+					<p class="marge">- <span class="marge">Déplacement des personnages sur le plateau.</span></p>
+					<p class="marge">- <span class="marge">Participation à l'aide pour la sélection des
+							déplacements.</span></p>
+					<p class="marge">- <span class="marge">Gestion des menus.</span></p>
+					<p class="marge">- <span class="marge">Participation à l'implémentation des mécaniques globales du
+							jeu</span></p>
+				</div>
+				<div class="text-justify text-base pt-4">
+					<span class="font-bold">Participants :</span>
+					Allan Duee et Guillaume Blanc de Lanaute.
 				</div>
 			</div>
 		</div>
-		<div class="bg-gray-600 flex justify-center">
-			<span class="text-white p-2">Made with <i class="fas fa-heart text-red-600"></i> by WarTey</span>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-		<script src="js/app.js"></script>
-	</body>
+	</div>
+	<div class="bg-gray-600 flex justify-center">
+		<span class="text-white p-2">Made with <i class="fas fa-heart text-red-600"></i> by WarTey</span>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script src="js/app.js"></script>
+	<script src="js/tooltip.js"></script>
+</body>
+
 </html>
