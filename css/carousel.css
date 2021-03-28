@@ -10,7 +10,8 @@
 .carousel-gamethree-open:checked + .carousel-gamethree-item,
 .carousel-gamefour-open:checked + .carousel-gamefour-item,
 .carousel-gamefive-open:checked + .carousel-gamefive-item,
-.carousel-gamesix-open:checked + .carousel-gamesix-item {
+.carousel-gamesix-open:checked + .carousel-gamesix-item,
+.carousel-gameseven-open:checked + .carousel-gameseven-item {
 	position: static;
 	opacity: 100;
 }
@@ -20,7 +21,8 @@
 .carousel-gamethree-item ,
 .carousel-gamefour-item,
 .carousel-gamefive-item,
-.carousel-gamesix-item {
+.carousel-gamesix-item,
+.carousel-gameseven-item {
 	-webkit-transition: opacity 0.6s ease-out;
 	transition: opacity 0.6s ease-out;
 }
@@ -30,7 +32,8 @@
 .carousel-gamethree-indicators,
 .carousel-gamefour-indicators,
 .carousel-gamefive-indicators,
-.carousel-gamesix-indicators {
+.carousel-gamesix-indicators,
+.carousel-gameseven-indicators {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -68,7 +71,13 @@
 #carousel-gamesix-1:checked ~ .control-1,
 #carousel-gamesix-2:checked ~ .control-2,
 #carousel-gamesix-3:checked ~ .control-3,
-#carousel-gamesix-4:checked ~ .control-4 {
+#carousel-gamesix-4:checked ~ .control-4,
+#carousel-gameseven-1:checked ~ .control-1,
+#carousel-gameseven-2:checked ~ .control-2,
+#carousel-gameseven-3:checked ~ .control-3,
+#carousel-gameseven-4:checked ~ .control-4,
+#carousel-gameseven-5:checked ~ .control-5,
+#carousel-gameseven-6:checked ~ .control-6 {
 	display: block;
 }
 
@@ -98,7 +107,13 @@
 #carousel-gamesix-1:checked ~ .control-1 ~ .carousel-gamesix-indicators li:nth-child(1) .carousel-gamesix-bullet,
 #carousel-gamesix-2:checked ~ .control-2 ~ .carousel-gamesix-indicators li:nth-child(2) .carousel-gamesix-bullet,
 #carousel-gamesix-3:checked ~ .control-3 ~ .carousel-gamesix-indicators li:nth-child(3) .carousel-gamesix-bullet,
-#carousel-gamesix-4:checked ~ .control-4 ~ .carousel-gamesix-indicators li:nth-child(4) .carousel-gamesix-bullet {
+#carousel-gamesix-4:checked ~ .control-4 ~ .carousel-gamesix-indicators li:nth-child(4) .carousel-gamesix-bullet,
+#carousel-gameseven-1:checked ~ .control-1 ~ .carousel-gameseven-indicators li:nth-child(1) .carousel-gameseven-bullet,
+#carousel-gameseven-2:checked ~ .control-2 ~ .carousel-gameseven-indicators li:nth-child(2) .carousel-gameseven-bullet,
+#carousel-gameseven-3:checked ~ .control-3 ~ .carousel-gameseven-indicators li:nth-child(3) .carousel-gameseven-bullet,
+#carousel-gameseven-4:checked ~ .control-4 ~ .carousel-gameseven-indicators li:nth-child(4) .carousel-gameseven-bullet,
+#carousel-gameseven-5:checked ~ .control-5 ~ .carousel-gameseven-indicators li:nth-child(5) .carousel-gameseven-bullet,
+#carousel-gameseven-6:checked ~ .control-6 ~ .carousel-gameseven-indicators li:nth-child(6) .carousel-gameseven-bullet {
 	color: rgb(75, 85, 99);
 }
 
@@ -208,4 +223,28 @@
 
 .bg-gamesix-4 {
 	background-image: url("../img/game-six/4.webp");
+}
+
+.bg-gameseven-1 {
+	background-image: url("../img/game-seven/1.webp");
+}
+
+.bg-gameseven-2 {
+	background-image: url("../img/game-seven/2.webp");
+}
+
+.bg-gameseven-3 {
+	background-image: url("../img/game-seven/3.webp");
+}
+
+.bg-gameseven-4 {
+	background-image: url("../img/game-seven/4.webp");
+}
+
+.bg-gameseven-5 {
+	background-image: url("../img/game-seven/5.webp");
+}
+
+.bg-gameseven-6 {
+	background-image: url("../img/game-seven/6.webp");
 }
