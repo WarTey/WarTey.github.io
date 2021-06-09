@@ -10,7 +10,6 @@ iframe {
 }
 
 #modal {
-	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -21,7 +20,7 @@ iframe {
 	-webkit-animation-name: fadeIn;
 	-webkit-animation-duration: 0.4s;
 	animation-name: fadeIn;
-	animation-duration: 0.4s
+	animation-duration: 0.4s;
 }
 
 #sheet {
@@ -41,7 +40,7 @@ iframe {
 	-webkit-animation-name: slideIn;
 	-webkit-animation-duration: 0.4s;
 	animation-name: slideIn;
-	animation-duration: 0.4s
+	animation-duration: 0.4s;
 }
 
 #open, #close {
@@ -59,6 +58,20 @@ iframe {
 #open:hover, #close:hover {
 	cursor: pointer;
 	background-color: darkred;
+}
+
+#loading {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 @-webkit-keyframes slideIn {
@@ -86,21 +99,13 @@ iframe {
 }
 
 @-webkit-keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+	from { opacity: 0; }
 
-	to {
-		opacity: 1;
-	}
+	to { opacity: 1; }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+	from { opacity: 0; }
 
-	to {
-		opacity: 1;
-	}
+	to { opacity: 1; }
 }
