@@ -13,17 +13,6 @@ const playerOneLife = document.getElementById("player-one-life");
 const playerTwoLife = document.getElementById("player-two-life");
 const playerThreeLife = document.getElementById("player-three-life");
 const playerFourLife = document.getElementById("player-four-life");
-const sheetNameSet = "Setting";
-const sheetNameR1 = "Round 1";
-const sheetNameR2 = "Round 2";
-const sheetNameR3 = "Round 3";
-const sheetNameR4 = "Round 4";
-const sheetNameR5 = "Round 5";
-const sheetNameR6 = "Round 6";
-const sheetNameR7 = "Round 7";
-const sheetNameR8 = "Round 8";
-const sheetNameR9 = "Round 9";
-const sheetNameR10 = "Round 10";
 const interval = 1000;
 
 var timer = 10;
@@ -32,7 +21,7 @@ var totalScore = 0;
 get("Résultats", updateSheetRes);
 
 setInterval(function () {
-	refreshTimer.innerHTML = "Raffraîchissement dans " + timer-- + "s";
+	refreshTimer.innerHTML = "Rafraîchissement dans " + timer-- + "s";
 	if (timer < 0) {
 		timer = 10;
 		get("Résultats", updateSheetRes);
