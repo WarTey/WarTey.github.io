@@ -9,7 +9,30 @@
 </head>
 <body>
 	<div id="loading"></div>
+	<span id="refresh-timer">test</span>
 	<iframe src="https://playingcards.io/cbtqas" frameborder="0"></iframe>
+	<div id="players-frame">
+		<div id="player-one">
+			<p>Nom : <span id="player-one-name">TEST</span></p>
+			<p>Vie : <span id="player-one-life">TEST</span></p>
+			<p>Points : <span id="player-one-points">TEST</span></p>
+		</div>
+		<div id="player-two">
+			<p>Nom : <span id="player-two-name">TEST</span></p>
+			<p>Vie : <span id="player-two-life">TEST</span></p>
+			<p>Points : <span id="player-two-points">TEST</span></p>
+		</div>
+		<div id="player-three">
+			<p>Nom : <span id="player-three-name">TEST</span></p>
+			<p>Vie : <span id="player-three-life">TEST</span></p>
+			<p>Points : <span id="player-three-points">TEST</span></p>
+		</div>
+		<div id="player-four">
+			<p>Nom : <span id="player-four-name">TEST</span></p>
+			<p>Vie : <span id="player-four-life">TEST</span></p>
+			<p>Points : <span id="player-four-points">TEST</span></p>
+		</div>
+	</div>
 	<div id="modal">
 		<div id="content">
 			<button id="close">Fermer</button>
@@ -18,7 +41,11 @@
 			</div>
 		</div>
 	</div>
-	<button id="open">Feuille</button>
+	<div>
+		<button id="open">Feuilles</button>
+		<button id="scores">Scores</button>
+	</div>
 	<script src="js/switch.js"></script>
+	<script src="js/sheet.js"></script>
 </body>
 </html>

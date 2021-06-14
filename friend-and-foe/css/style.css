@@ -9,6 +9,13 @@ iframe {
 	height: 100%;
 }
 
+#refresh-timer {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	margin-top: 0.2rem;
+}
+
 #modal {
 	position: fixed;
 	left: 0;
@@ -43,7 +50,7 @@ iframe {
 	animation-duration: 0.4s;
 }
 
-#open, #close {
+#open, #close, #scores {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -55,7 +62,11 @@ iframe {
 	color: white;
 }
 
-#open:hover, #close:hover {
+#scores {
+	margin-top: 3.25rem;
+}
+
+#open:hover, #close:hover, #scores:hover {
 	cursor: pointer;
 	background-color: darkred;
 }
@@ -72,6 +83,30 @@ iframe {
 	background-image: url("https://i.stack.imgur.com/MnyxU.gif");
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+#player-one {
+	position: fixed;
+	top: 6rem;
+	left: 1rem;
+}
+
+#player-two {
+	position: fixed;
+	top: 6rem;
+	right: 1rem;
+}
+
+#player-three {
+	position: fixed;
+	bottom: 18rem;
+	left: 1rem;
+}
+
+#player-four {
+	position: fixed;
+	bottom: 18rem;
+	right: 1rem;
 }
 
 @-webkit-keyframes slideIn {
