@@ -13,6 +13,7 @@ const playerOneLife = document.getElementById("player-one-life");
 const playerTwoLife = document.getElementById("player-two-life");
 const playerThreeLife = document.getElementById("player-three-life");
 const playerFourLife = document.getElementById("player-four-life");
+const bossLife = document.getElementById("boss-life");
 const interval = 1000;
 
 var timer = 10;
@@ -42,21 +43,22 @@ function get(sheetName, callback) {
 	});
 }
 
-function updateLifeColor(el, value) {
+function updateLifeColor(el, value, b1, b2) {
 	el.innerHTML = value > -1 ? value : "💀";
-	if (value > 7)
+	if (value > b1)
 		el.style.color = "green";
-	else if (value > 3)
+	else if (value > b2)
 		el.style.color = "orange";
 	else if (value > 0)
 		el.style.color = "red";
 }
 
 function updateSheetRound(values) {
-	updateLifeColor(playerOneLife, values[68][3]);
-	updateLifeColor(playerTwoLife, values[69][3]);
-	updateLifeColor(playerThreeLife, values[70][3]);
-	updateLifeColor(playerFourLife, values[71][3]);
+	updateLifeColor(playerOneLife, values[68][3], 7, 3);
+	updateLifeColor(playerTwoLife, values[69][3], 7, 3);
+	updateLifeColor(playerThreeLife, values[70][3], 7, 3);
+	updateLifeColor(playerFourLife, values[71][3], 7, 3);
+	updateLifeColor(bossLife, values[68][21], 29, 14);
 }
 
 function checkWinner(value, el, name) {
