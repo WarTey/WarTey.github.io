@@ -21,7 +21,7 @@ var totalScore = 0;
 get("Résultats", updateSheetRes);
 
 setInterval(function () {
-	refreshTimer.innerHTML = "Rafraîchissement dans " + timer-- + "s";
+	refreshTimer.innerHTML = "Rafraîchissement des scores dans " + timer-- + "s";
 	if (timer < 0) {
 		timer = 10;
 		get("Résultats", updateSheetRes);

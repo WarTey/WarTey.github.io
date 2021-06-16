@@ -16,7 +16,7 @@ iframe {
 	margin-top: 0.2rem;
 }
 
-#modal {
+#modal, #players-frame {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -30,17 +30,10 @@ iframe {
 	animation-duration: 0.4s;
 }
 
-#sheet {
-	width: 100%;
-	height: 100%;
-}
-
-#content {
+#content, #scoreboard {
 	background-color: white;
 	border-radius: 0.5rem;
 	bottom: 0;
-	width: 100%;
-	height: 92%;
 	position: fixed;
 	margin: auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -50,7 +43,27 @@ iframe {
 	animation-duration: 0.4s;
 }
 
-#open, #close, #scores {
+#scoreboard {
+	left: 30%;
+	width: 40%;
+	height: 50%;
+}
+
+#scoreboard > h1, #scoreboard > p {
+	text-align: center;
+}
+
+#sheet {
+	width: 100%;
+	height: 100%;
+}
+
+#content {
+	width: 100%;
+	height: 92%;
+}
+
+#open, .close, #scores {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -66,7 +79,7 @@ iframe {
 	margin-top: 3.25rem;
 }
 
-#open:hover, #close:hover, #scores:hover {
+#open:hover, .close:hover, #scores:hover {
 	cursor: pointer;
 	background-color: darkred;
 }
@@ -107,6 +120,28 @@ iframe {
 	position: fixed;
 	bottom: 12rem;
 	right: 1rem;
+}
+
+#table {
+	overflow-x: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
 }
 
 @-webkit-keyframes slideIn {

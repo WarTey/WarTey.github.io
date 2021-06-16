@@ -12,30 +12,44 @@
 	<span id="refresh-timer">Chargement...</span>
 	<iframe src="https://playingcards.io/cbtqas" frameborder="0"></iframe>
 	<div id="players-frame">
-		<div id="player-one">
-			<p>Nom : <span id="player-one-name">Chargement...</span></p>
-			<p>Vie : <span id="player-one-life">Chargement...</span></p>
-			<p>Points : <span id="player-one-points">Chargement...</span></p>
-		</div>
-		<div id="player-two">
-			<p>Nom : <span id="player-two-name">Chargement...</span></p>
-			<p>Vie : <span id="player-two-life">Chargement...</span></p>
-			<p>Points : <span id="player-two-points">Chargement...</span></p>
-		</div>
-		<div id="player-three">
-			<p>Nom : <span id="player-three-name">Chargement...</span></p>
-			<p>Vie : <span id="player-three-life">Chargement...</span></p>
-			<p>Points : <span id="player-three-points">Chargement...</span></p>
-		</div>
-		<div id="player-four">
-			<p>Nom : <span id="player-four-name">Chargement...</span></p>
-			<p>Vie : <span id="player-four-life">Chargement...</span></p>
-			<p>Points : <span id="player-four-points">Chargement...</span></p>
+		<div id="scoreboard">
+			<button class="close" onclick="closeModal()">Fermer</button>
+			<h1>Tableau des scores</h1>
+			<p>Vie du Boss 👹 : <span id="boss-life">Chargement...</span></p>
+			<div id="table">
+				<table>
+					<tr>
+						<th>Joueur</th>
+						<th>Points</th>
+						<th>Vie du round</th>
+					</tr>
+					<tr>
+						<td id="player-one-name">Chargement...</td>
+						<td id="player-one-points">Chargement...</td>
+						<td id="player-one-life">Chargement...</td>
+					</tr>
+					<tr>
+						<td id="player-two-name">Chargement...</td>
+						<td id="player-two-points">Chargement...</td>
+						<td id="player-two-life">Chargement...</td>
+					</tr>
+					<tr>
+						<td id="player-three-name">Chargement...</td>
+						<td id="player-three-points">Chargement...</td>
+						<td id="player-three-life">Chargement...</td>
+					</tr>
+					<tr>
+						<td id="player-four-name">Chargement...</td>
+						<td id="player-four-points">Chargement...</td>
+						<td id="player-four-life">Chargement...</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 	<div id="modal">
 		<div id="content">
-			<button id="close">Fermer</button>
+			<button class="close" onclick="closeModal()">Fermer</button>
 			<div id="sheet">
 				<iframe src="https://docs.google.com/spreadsheets/d/13_GMlu8BCvk7AfyK2nBOetkdYnUdV725-m-5Tc6IBmk/edit?usp=sharing?&amp;rm=minimal&amp;"></iframe>
 			</div>

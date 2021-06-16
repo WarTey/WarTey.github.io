@@ -2,31 +2,31 @@ const modal = document.getElementById("modal");
 const frame = document.getElementById("players-frame");
 const btnOpen = document.getElementById("open");
 const btnScores = document.getElementById("scores");
-const btnClose = document.getElementById("close");
 const loading = document.getElementById("loading");
+const scoreboard = document.getElementById("players-frame");
 
 function updateFrame() {
 	if (frame.style.display == "none") fadeIn(frame);
 	else fadeOut(frame);
 }
 
-function openModal() {
-	modal.style.display = "block";
+function openModal(el) {
+	el.style.display = "block";
 	btnOpen.style.display = "none";
 	btnScores.style.display = "none";
 }
 
 function closeModal() {
 	modal.style.display = "none";
+	scoreboard.style.display = "none";
 	btnOpen.style.display = "block";
 	btnScores.style.display = "block";
 }
 
-btnOpen.onclick = function () { openModal(); }
-btnClose.onclick = function () { closeModal(); }
-btnScores.onclick = function () { updateFrame(); }
+btnOpen.onclick = function () { openModal(modal); }
+btnScores.onclick = function () { openModal(scoreboard); }
 
-window.onclick = function (event) { if (event.target == modal) closeModal(); }
+window.onclick = function (event) { if (event.target == modal || event.target == scoreboard) closeModal(); }
 
 function fadeOut(el) {
 	el.style.opacity = 1;
