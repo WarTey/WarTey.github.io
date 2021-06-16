@@ -59,6 +59,7 @@ function updateSheetRound(values) {
 	updateLifeColor(playerThreeLife, values[70][3], 7, 3);
 	updateLifeColor(playerFourLife, values[71][3], 7, 3);
 	updateLifeColor(bossLife, values[68][21], 29, 14);
+	console.log(values);
 }
 
 function checkWinner(value, el, name) {
