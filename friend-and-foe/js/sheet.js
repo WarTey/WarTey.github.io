@@ -44,7 +44,7 @@ function get(sheetName, callback) {
 }
 
 function updateLifeColor(el, value, b1, b2) {
-	el.innerHTML = value > -1 ? value : "💀";
+	el.innerHTML = value > 0 ? value : "💀";
 	if (value > b1)
 		el.style.color = "green";
 	else if (value > b2)
@@ -82,6 +82,5 @@ function updateSheetRes(values) {
 	checkWinner(values[5][2], playerThreePoints, playerThreeName);
 	checkWinner(values[6][2], playerFourPoints, playerFourName);
 
-	totalScore = values[3][2] + values[4][2] + values[5][2] + values[6][2];
-	get("Round " + (totalScore + 1), updateSheetRound);
+	get("Round " + values[3][7], updateSheetRound);
 }
